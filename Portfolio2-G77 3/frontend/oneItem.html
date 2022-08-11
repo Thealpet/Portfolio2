@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Item</title>
+
+        <style>
+             body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: white;
+            }
+
+            .dropdown-cart{
+                max-height: 500px;
+                overflow-y: scroll;
+            } 
+
+            .row {
+                margin: 5%; 
+            }
+        </style>
+
+        <link rel="shortcut icon" href="#"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="oneItem.js"></script>
+        
+        
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top ">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <div class="number-count">
+                            <p class="count" style="color: white; position: fixed; margin-top: 14px; "> 0</p>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                        <ul class="dropdown-menu dropdown-cart">
+                            <li>
+                                <div class="container" style="width: 450px; " id="cart">
+                                    <div class="row" id ="cart-row" style="border-bottom: 0.5px solid black ;">
+                                        <div class="col-md-3">
+                                            <span class="itemPic">Image</span>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <span class="itemName">Name</span>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <span class="itemPrice">Price</span>
+                                        </div>
+                                        <div class="col-md-3" style="margin-top: 10px;">
+                                        </div>
+                                    </div>
+                                    <div class="cart-items">
+                                    </div>
+                                    <div class="cart-total" style="float:right;">
+                                        <strong>Total: </strong>
+                                        <span class="cart-total-price">0</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <div class="checkout" >
+                                <a class="text-center" href="checkout.html" style="text-decoration: none; color: black;" ><h4>Go to checkout</h4></a>
+                            </div>
+                        </ul>
+                    </li>
+                     
+                     
+                </ul>
+            </div>
+        </div>
+
+        <section class="text-md-start">
+            <div class="container" id="item">
+                <div class="row" id="item_row">
+                    <div class="col-md-6 mb-6">
+                        <img src="" class="img-fluid itemcard-image" style="width: 500px;height: 600px; object-fit: cover;"/>
+                    </div>
+                    <div class="col-md-6 mb-6">
+                        <h3 class="itemname">Name</h3>
+                        <p class="long_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ratione
+                            necessitatibus itaque error alias repellendus nemo reiciendis aperiam quisquam minus
+                            ipsam reprehenderit commodi ducimus, in dicta aliquam eveniet dignissimos magni.</p>
+                        <h5 class="itemprice">Price</h5>
+                        <button type="button" class="btn btn-primary" onclick="addToBag()">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Checkout</title>
+
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: white;
+            }
+            
+            .dropdown-cart{
+                max-height: 500px;
+                overflow-y: scroll;
+            }  
+        </style>
+    
+        <link rel="shortcut icon" href="#"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="checkout.js"></script>
+    </head>
+
+    
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top ">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <div class="number-count">
+                            <p class="count" style="color: white; position: fixed; margin-top: 14px; "> 0</p>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                        <ul class="dropdown-menu dropdown-cart">
+                            <li>
+                                <div class="container" style="width: 450px; " id="cart">
+                                    <div class="row" id ="cart-row" style="border-bottom: 0.5px solid black ;">
+                                        <div class="col-md-3">
+                                            <span class="itemPic">Image</span>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <span class="itemName">Name</span>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <span class="itemPrice">Price</span>
+                                        </div>
+                                        <div class="col-md-3" style="margin-top: 10px;">
+                                        </div>
+                                    </div>
+                                    <div class="cart-items">
+                                    </div>
+                                    <div class="cart-total" style="float:right;">
+                                        <strong>Total: </strong>
+                                        <span class="cart-total-price">0</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <div class="checkout" >
+                                <a class="text-center" href="#" style="text-decoration: none; color: black;" ><h4>Go to checkout</h4></a>
+                            </div>
+                        </ul>
+                    </li>
+                     
+                     
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container" id="items" style="margin-top: 100px;">
+            <h1>Your cart</h1> 
+            <div class="row" id="first-row" style="border-bottom: 0.5px solid black;">
+                <div class="col-md-4">
+                    <img src="" class="card-image" style="width: 80px; height: 70px; object-fit: cover;"/>
+                </div>
+                <div class="col-md-4">
+                    <p class="name" style="margin-top: 20px;">Name</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="price" style="margin-top: 20px;">Price</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="container">
+            <strong>Total: </strong>
+            <span class="total-price">0</span>
+        </div>
+        <div class="container" id="purchase">
+            
+            <button type="button" class="btn btn-primary" onclick="completePurchase()" style="margin-top: 100px;">Complete Purchase</button>  
+        </div>
+    </body>
+</html>
+
+
+

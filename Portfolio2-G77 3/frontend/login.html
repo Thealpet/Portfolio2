@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Admin</title>
+
+        <link rel="shortcut icon" href="#"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="login.js"></script>
+        
+
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top ">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="text-center">
+            <h1 style="margin-top: 100px;">Login for administrator</h1>
+            <div class="login " style="margin-top: 100px; ">
+                <h3>Log in</h3>
+                <div class="container">
+                    <div class="usern" style="margin:10px;" >
+                        <label for="username"><b>Username</b></label>
+                        <input type="text" placeholder="Username" name="username" id="username" required>
+                    </div>
+                    <div class="pwd" style="margin:10px;" >
+                        <label for="password"><b>Password</b></label>
+                        <input type="password" placeholder="Password" name="password" id="password" required>
+                    </div>
+
+                    <button type="button"  class="btn btn-primary" onclick="logIn()">Log in</button> 
+                    <div class="failed" id="fail" style="color:red;">
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="addPlant">
+
+        </div>
+        <h3 class="added" id="added" style="margin-bottom:100px; margin-left: 150px;">
+
+        </h3>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Home</title>
+
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: white;
+            }
+
+            .bg-image a.oneItem  {
+                color: black;
+                text-decoration: none;
+            }
+            .bg-image a:hover {
+                opacity: 0.4;
+            }
+
+            .dropdown-cart{
+                max-height: 500px;
+                overflow-y: scroll;
+            }  
+        </style>
+
+        <link rel="shortcut icon" href="#"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="index.js"></script>   
+    </head>
+
+    
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top ">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <div class="number-count">
+                            <p class="count" style="color: white; position: fixed; margin-top: 14px; "> 0</p>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                        <ul class="dropdown-menu dropdown-cart">
+                            <li>
+                                <div class="container" style="width: 450px; " id="cart">
+                                    <div class="row" id ="cart-row" style="border-bottom: 0.5px solid black ;">
+                                        <div class="col-md-3">
+                                            <span class="itemPic">Image</span>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <span class="itemName">Name</span>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <span class="itemPrice">Price</span>
+                                        </div>
+                                        <div class="col-md-3" style="margin-top: 10px;">
+                                        </div>
+                                    </div>
+                                    <div class="cart-items">
+                                    </div>
+                                    <div class="cart-total" style="float:right;">
+                                        <strong>Total: </strong>
+                                        <span class="cart-total-price">0</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <div class="checkout" >
+                                <a class="text-center" href="checkout.html" style="text-decoration: none; color: black;" ><h4>Go to checkout</h4></a>
+                            </div>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="admin" href="login.html"><span class="glyphicon glyphicon-user"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <section class="text-center text-md-start">
+            <div class="container"  id="items" style="margin-top: 100px;">
+                <div class="row" id="first_row">
+                    <div class="col-md-4 mb-4 " id="col" style="height: 500px;">
+                        <div class="bg-image">
+                            <img src="" class="img-fluid card-image" style="width: 300px;height: 300px; object-fit: cover;"/>
+                            <h4 class="name">Name</h4>
+                            <p class="description">Description</p>
+                            <p class="price">Price</p>
+                            <button type="button"  class="btn btn-primary" onclick="load_id(this)">See more</button> 
+                            <button type="button"  class="btn btn-primary" onclick="addToBag(this)">Buy</button> 
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
+
+
+
